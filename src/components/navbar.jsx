@@ -81,7 +81,7 @@ export function Navbar() {
             <div className="flex h-16 items-center border-b border-white/10 px-6">
               <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
                 <Image
-                  src="/placeholder.svg"
+                  src="/globe.svg"
                   alt="E-Cell Logo"
                   width={32}
                   height={32}
