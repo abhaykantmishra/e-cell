@@ -46,17 +46,22 @@ export default function Home() {
           <div className="flex flex-col items-center text-center gap-8">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl" />
-              <h1 className="text-4xl md:text-6xl font-bold relative z-10 glitch-text">
+              <h1 className="text-4xl md:text-6xl font-bold relative z-10 ">
                 E-Cell IIT ISM Dhanbad
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-neutral-400 max-w-2xl">
               Fostering Innovation and Entrepreneurship
             </p>
-            <Button onClick={() => {router.push('#vision')}} size="lg" className="group hover:bg-white hover:text-black transition-colors border border-white">
-              Explore
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 blur-lg opacity-75 animate-pulse"></div>
+              <Link href="/#vision" passHref>
+                <Button size="lg" className="relative bg-black hover:bg-gray-800 text-white border border-white/20 group transition-all duration-300">
+                  Explore
+                  <ArrowRight className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
