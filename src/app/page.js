@@ -70,22 +70,21 @@ export default function Home() {
       {/* Vision Section */}
       <section id='vision' className="py-20  text-white border-t border-white/10">
         <div className="container px-4 mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="relative h-0 md:h-[400px] w-full rounded-lg overflow-hidden">
-              <Image
-                src={'/window.svg'}
-                alt="E-Cell Event"
-                fill
-                className="hidden md:block object-cover"
-              />
+            <Image
+              src={'/e-cell-logo.png'}
+              alt="E-Cell"
+              width={400}
+              height={400}
+              className="object-contain md:block mx-10"
+                  />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
             <div className="space-y-6">
               <h2 className="text-4xl font-bold">Our Vision</h2>
               <p className="text-xl text-neutral-400 leading-relaxed">
-                Our vision is to make students and faculty 'entrepreneurial' in every work that they do. 
-                We hope to enable them to solve global challenges as we see students as the greatest 
-                capital and intend to nurture them, provide them with opportunities for excellence.
+              E-Cell, IIT-ISM believes that emerging economies like India need the drive and innovation of young entrepreneurs. The Cell therefore aims at manifesting the latent Entrepreneurial spirit of the youth. The Cell not only motivates the youth to start-up their own enterprise, but also makes efforts to provide them with the necessary resources to do so.
               </p>
             </div>
           </div>
@@ -132,13 +131,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Image
-                src={'/vercel.svg'}
+                src={'/e-summit-logo.png'}
                 alt="E-Summit Logo"
-                width={300}
-                height={300}
+                width={500}
+                height={500}
                 className="mb-6"
               />
-              <h2 className="text-3xl font-bold mb-4">Soaring Through Shifts</h2>
+              <h2 className="text-3xl font-bold mb-4">Take The Leap</h2>
               <p className="text-neutral-400 text-lg leading-relaxed">
                 Every year, we play host to our flagship event, E-Summit. E-Summit 2024, themed around 
                 Soaring Through Shifts is a 4-Conclave model including Youth Conclave, Innovators' Conclave,
@@ -181,11 +180,13 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-12 text-center">Our Initiatives</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card className="card-hover-line bg-purple-500/30 border-white/10 hover:bg-purple-500/40 transition-all cursor-pointer group md:col-span-2 hover:-translate-y-1">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Annual Entrepreneurship Summit</h3>
-                <p className="text-neutral-400">Our flagship event bringing together innovators, investors, and industry leaders</p>
-                <ArrowRight className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </CardContent>
+              <Link href="/e-summit" passHref legacyBehavior>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-2">Annual Entrepreneurship Summit</h3>
+                  <p className="text-neutral-400">Our flagship event bringing together innovators, investors, and industry leaders</p>
+                  <ArrowRight className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </CardContent>
+              </Link>
             </Card>
             <Card className="card-hover-line bg-blue-500/30 border-white/10 hover:bg-blue-500/40 transition-all cursor-pointer group hover:-translate-y-1">
               <CardContent className="p-6">
