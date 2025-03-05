@@ -44,11 +44,11 @@ body {
 }
 
 .bg-grid {
-  background-size: 48.5px 48.5px;
+  background-size: 48.7px 48.7px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-position: top center;
-  /* image-rendering: pixelated; */
+  image-rendering:pixelated;
 }
 
 .bg-grid-dark {
