@@ -44,7 +44,7 @@ export function Footer() {
           <div className="space-y-1">
             <Link href="/" className="inline-block">
               <Image
-                src="/globe.svg"
+                src="/e-cell-logo.png"
                 alt="E-Cell Logo"
                 width={64}
                 height={64}

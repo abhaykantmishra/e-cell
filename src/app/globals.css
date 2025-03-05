@@ -75,3 +75,19 @@ body {
   width: 100%;
   left: 0;
 }
+
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4;
+}
+
+.prose a {
+  @apply text-cyan-400 hover:text-cyan-300 underline;
+}

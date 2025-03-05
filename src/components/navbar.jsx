@@ -10,6 +10,7 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetTitle,
 } from "@/components/ui/sheet"
 
 const geistSans = Geist({
@@ -24,9 +25,9 @@ const geistMono = Geist_Mono({
 
 const navigation = [
   { name: 'NETWORK', href: '/network' },
-  { name: 'ABOUT US', href: '/about' },
+  { name: 'ABOUT-US', href: '/about' },
   // { name: 'EDITORIAL CORNER', href: '/editorial' },
-  { name: 'INITIATIVES', href: '/#initiatives' },
+  { name: 'INITIATIVES', href: '/initiatives' },
   { name: 'BLOG', href: '/blog' },
   { name: 'TEAM', href: '/team' },
 ]
@@ -36,16 +37,16 @@ export function Navbar() {
 
   return (
     <header className={`${geistSans.variable} ${geistMono.variable} font-mono sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60`}>
-      <nav className="flex h-16 items-center  px-4">
-        <Link href="/" className="mr-8 flex items-center space-x-2">
+      <nav className="flex h-14 items-center px-4">
+        <Link href="/" className="mr-4 flex items-center space-x-2">
           <Image
-            src="/vercel.svg"
+            src="/e-cell-logo.png"
             alt="E-Cell Logo"
-            width={40}
-            height={40}
+            width={32}
+            height={32}
             className="rounded-lg"
           />
-          <span className="hidden font-bold sm:inline-block">
+          <span className="hidden text-sm font-bold sm:inline-block">
             E-Cell IIT ISM Dhanbad
           </span>
         </Link>
@@ -70,33 +71,34 @@ export function Navbar() {
               variant="ghost"
               className="ml-auto h-8 w-8 px-0 text-white hover:bg-white/10"
             >
-              <Menu className="h-5 w-5" />
+              <Menu className="h-4 w-4" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-full border-white/10 bg-black px-0 pt-0"
+            className="w-[85vw] max-w-xs border-white/10 bg-black/95 backdrop-blur px-0 pt-0"
           >
-            <div className="flex h-16 items-center border-b border-white/10 px-6">
+            <div className="flex h-14 items-center border-b border-white/10 px-4">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
                 <Image
-                  src="/globe.svg"
+                  src="/e-cell-logo.png"
                   alt="E-Cell Logo"
-                  width={32}
-                  height={32}
+                  width={40}
+                  height={40}
                   className="rounded-lg"
                 />
-                <span className="font-bold">E-Cell IIT ISM Dhanbad</span>
+                <span className="text-sm font-bold">E-Cell IIT ISM Dhanbad</span>
               </Link>
             </div>
-            <nav className="flex flex-col px-6">
+            <nav className="flex flex-col px-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="border-b border-white/10 py-4 text-sm font-medium text-white/70 transition-colors hover:text-white"
+                  className="border-b border-white/10 py-5 text-base font-medium text-white/70 transition-colors hover:text-white"
                 >
                   {item.name}
                 </Link>
